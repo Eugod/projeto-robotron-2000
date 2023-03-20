@@ -1,7 +1,7 @@
 :root {
-    --main-cinza: #CCCCCC;
-    --main-branco: #FFFFFF;
-    --main-preto: #000000;
+    --main-1: #121D40;
+    --main-2: #FFFFFF;
+    --main-3: #000000;
 }
 
 * {
@@ -55,13 +55,13 @@ main {
     line-height: 0.8;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    color: rgba(255,255,255,0.8)
+    color: #050505b2
 }
 
 .box {
     background: rgba(0,0,0,0.6);
     clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
-    border-left: 5px solid var(--main-cinza);
+    border-left: 5px solid var(--main-1);
     height: 80%;
 }
 
@@ -75,7 +75,7 @@ main {
     height: 100%;;
 }
 
-.montador-conteudo {
+.montadorConteudo {
     padding: 2em 10%;
 }
 
@@ -83,14 +83,14 @@ main {
     padding: 1em 0;
 }
 
-.peca-titulo {
-    color: var(--main-branco);
+.pecaTitulo {
+    color: var(--main-2);
     text-transform: uppercase;
     font-size: 2.5em;
 }
 
 .controle {
-    background: var(--main-preto);
+    background: var(--main-3);
     border-radius: 25px;
     float: right;
     display: inline-flex;
@@ -99,13 +99,13 @@ main {
     align-self: flex-end;
 }
 
-.controle-contador {
+.controleContador {
     width: 40px;
     height: 35px;
     background: none;
     border: 0;
     margin: 0 1rem;
-    color: var(--main-branco);
+    color: var(--main-2);
     text-align: center;
     font-size: 2.5em;
     display: inline-flex;
@@ -113,22 +113,22 @@ main {
     padding-top: 8px;
 }
 
-.controle-ajuste {
+.controleAjuste {
     display: inline-block;
     width: 40px;
     height: 40px;
     line-height: 44px;
     border-radius: 50%;
-    color: var(--main-cinza);
+    color: var(--main-1);
     font-size: 4em;
-    background: var(--main-preto);
+    background: var(--main-3);
     text-align: center;
-    border: 3px solid var(--main-cinza);
+    border: 3px solid var(--main-1);
     cursor: pointer;
 }
 
 .linha {
-    border-color: var(--main-cinza);
+    border-color: var(--main-1);
 }
 
 .producao {
@@ -137,15 +137,15 @@ main {
     text-transform: uppercase;
     padding: 0.2em 1em;
     float: right;
-    border: 3px solid var(--main-branco);
-    background: var(--main-branco);
+    border: 3px solid var(--main-2);
+    background: var(--main-2);
     clip-path: polygon(100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 0);
     cursor: pointer;
 }
 
 .producao:hover {
-    background: var(--main-preto);
-    color: var(--main-branco)
+    background: var(--main-3);
+    color: var(--main-2)
 }
 
 
@@ -157,21 +157,21 @@ main {
 }
 
 .estatistica {
-    color: var(--main-branco);
+    color: var(--main-2);
     display: flex;
     align-items: flex-start;
     height: 25%;
 }
 
-.estatistica-titulo {
+.estatisticaTitulo {
     font-size: 1.5em;
-    border-bottom: 1px solid var(--main-cinza);
+    border-bottom: 1px solid var(--main-1);
     flex-basis: 40%;
     text-transform: uppercase;
     order: 1
 }
 
-.estatistica-valor {
+.estatisticaValor {
     flex-basis: 60%;
     position: relative;
     margin: 10px 0 0;
@@ -179,15 +179,15 @@ main {
     margin: -10px 0 0;
 }
 
-.estatistica-valor::after {
+.estatisticaValor::after {
     content: "";
     display: block;
     padding-bottom: 100%;
-    border: 1px solid var(--main-cinza);
+    border: 1px solid var(--main-1);
     border-radius: 50%;
 }
 
-.estatistica-numero {
+.estatisticaNumero {
     position: absolute;
     top: 50%;
     transform: translateY(-46%);
@@ -198,12 +198,12 @@ main {
     margin: 0;
 }
 
-.estatistica:nth-child(2n) .estatistica-titulo {
+.estatistica:nth-child(2n) .estatisticaTitulo {
     order: 2;
     text-align: right;
 }
 
-.estatistica:nth-child(2n) .estatistica-valor {
+.estatistica:nth-child(2n) .estatisticaValor {
     order: 1;
     flex-basis: 35%;
     margin: 10px 0 0;
