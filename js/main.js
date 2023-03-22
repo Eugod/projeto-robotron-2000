@@ -1,45 +1,27 @@
-const pecas = document.querySelectorAll('.controleContador');
+const pecas = document.querySelectorAll('[data-controle]');
 
-const controleAjuste = [];
+const controleAjuste = document.querySelectorAll('.controleAjuste');
 
-const nodeListAjuste = document.querySelectorAll('.controleAjuste');
+controleAjuste.forEach((elemento) => {
+    elemento.addEventListener('click', (e) => {
+        editarRobo(e.target.dataset.controle, e.target.parentNode);
+    })
+})
 
-for(let i = 0; i < nodeListAjuste.length; i++) {
+function editarRobo(operacao, controle) {
+    const peca = controle.querySelector('[data-contador]');
 
-    controleAjuste.push(nodeListAjuste[i]);
-};
+    if (operacao === '-') {
+        if (peca.value > 0) {
+            peca.value = Number(peca.value) - 1;
 
-const subtrair = controleAjuste.filter((e) => {return e.innerHTML === '-'});
-const somar = controleAjuste.filter((e) => {return e.innerHTML === '+'});
+            verificaValor(peca, Number(peca.value));
+        }
+    } else {
+        peca.value = Number(peca.value) + 1;
 
-editarRobo();
-
-function editarRobo() {
-    for(let i = 0; i < pecas.length; i++) {
-        let peca = pecas[i]
-
-        somar[i].addEventListener('click', () => {
-            let valor = converteValor(peca.value);
-
-            valor++;
-
-            verificaValor(peca, valor);
-        })
-
-        subtrair[i].addEventListener('click', () => {
-            let valor = converteValor(peca.value);
-
-            if(valor > 0) {
-                valor --;
-            }
-
-            verificaValor(peca, valor);
-        })
+        verificaValor(peca, Number(peca.value))
     }
-}
-
-function converteValor(valor) {
-    return Number(valor);
 }
 
 function verificaValor(peca, valor) {
