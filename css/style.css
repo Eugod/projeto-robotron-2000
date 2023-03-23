@@ -131,6 +131,19 @@ main {
     border-color: var(--main-1);
 }
 
+.trocarCor {
+    margin-top: 1em;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    padding: 0.2em 1em;
+    float: right;
+    border: 3px solid var(--main-2);
+    background: var(--main-2);
+    clip-path: polygon(100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 0);
+    cursor: pointer;
+    font-weight: bold;
+}
+
 .producao {
     margin-top: 1em;
     font-size: 2em;
@@ -143,7 +156,7 @@ main {
     cursor: pointer;
 }
 
-.producao:hover {
+.producao:hover, .trocarCor:hover {
     background: var(--main-3);
     color: var(--main-2)
 }

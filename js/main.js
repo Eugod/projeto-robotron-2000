@@ -1,3 +1,9 @@
+const botaoTrocarCor = document.querySelector('.trocarCor');
+
+const coresRobo = ['preto', 'vermelho', 'rosa', 'branco', 'azul', 'amarelo']
+
+let contador = 0;
+
 const controleAjuste = document.querySelectorAll('[data-controle]');
 
 const estatisticas = document.querySelectorAll('[data-estatistica]');
@@ -36,6 +42,20 @@ const pecas = {
     }
 }
 
+botaoTrocarCor.addEventListener('click', () => {
+    event.preventDefault();
+
+    let robo = document.querySelector('.robo')
+
+    contador++;
+
+    if (contador > 5) {
+        contador = 0;
+    }
+
+    robo.setAttribute('src', `img/robotron-${coresRobo[contador]}.png`);
+})
+
 controleAjuste.forEach((elemento) => {
     elemento.addEventListener('click', (e) => {
         editarRobo(e.target.dataset.controle, e.target.parentNode);
@@ -67,7 +87,7 @@ function verificaValor(peca, valor) {
 function atualizaEstatisticas(peca, operacao) {
     estatisticas.forEach((elemento) => {
         if (operacao === '-') {
-            if(elemento.innerHTML > 0 || elemento.innerHTML < 0) {
+            if (elemento.innerHTML > 0 || elemento.innerHTML < 0) {
                 elemento.innerHTML = Number(elemento.innerHTML) - pecas[peca][elemento.dataset.estatistica];
             }
         } else {
