@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico"/>
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico" />
     <title>Robotron 2000</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <main>
         <section class="robotron">
@@ -23,25 +25,25 @@
             <div class="estatistica">
                 <p class="estatisticaTitulo">Força</p>
                 <div class="estatisticaValor">
-                    <p class="estatisticaNumero">768</p>
+                    <p class="estatisticaNumero" data-estatistica="forca">0</p>
                 </div>
             </div>
             <div class="estatistica">
                 <p class="estatisticaTitulo">Poder</p>
                 <div class="estatisticaValor">
-                    <p class="estatisticaNumero">630</p>
+                    <p class="estatisticaNumero" data-estatistica="poder">0</p>
                 </div>
             </div>
             <div class="estatistica">
                 <p class="estatisticaTitulo">Energia</p>
                 <div class="estatisticaValor">
-                    <p class="estatisticaNumero">289</p>
+                    <p class="estatisticaNumero" data-estatistica="energia">0</p>
                 </div>
             </div>
             <div class="estatistica">
                 <p class="estatisticaTitulo">Velocidade</p>
                 <div class="estatisticaValor">
-                    <p class="estatisticaNumero">597</p>
+                    <p class="estatisticaNumero" data-estatistica="velocidade">0</p>
                 </div>
             </div>
         </section>
@@ -52,45 +54,45 @@
                     <div class="peca">
                         <label for="" class="pecaTitulo">Braços</label>
                         <div class="controle">
-                            <buttom class="controleAjuste" data-controle="-">-</buttom>
+                            <buttom class="controleAjuste" data-controle="-" data-peca="bracos">-</buttom>
                             <input type="text" class="controleContador" data-contador value="00">
-                            <buttom class="controleAjuste" data-controle="+">+</buttom>
+                            <buttom class="controleAjuste" data-controle="+" data-peca="bracos">+</buttom>
                         </div>
                     </div>
                     <hr class="linha">
                     <div class="peca">
                         <label for="" class="pecaTitulo">Blindagem</label>
                         <div class="controle">
-                            <buttom class="controleAjuste" data-controle="-">-</buttom>
+                            <buttom class="controleAjuste" data-controle="-" data-peca="blindagem">-</buttom>
                             <input type="text" class="controleContador" data-contador value="00">
-                            <buttom class="controleAjuste" data-controle="+">+</buttom>
+                            <buttom class="controleAjuste" data-controle="+" data-peca="blindagem">+</buttom>
                         </div>
                     </div>
                     <hr class="linha">
                     <div class="peca">
                         <label for="" class="pecaTitulo">Núcleos</label>
                         <div class="controle">
-                            <buttom class="controleAjuste" data-controle="-">-</buttom>
+                            <buttom class="controleAjuste" data-controle="-" data-peca="nucleos">-</buttom>
                             <input type="text" class="controleContador" data-contador value="00">
-                            <buttom class="controleAjuste" data-controle="+">+</buttom>
+                            <buttom class="controleAjuste" data-controle="+" data-peca="nucleos">+</buttom>
                         </div>
                     </div>
                     <hr class="linha">
                     <div class="peca">
                         <label for="" class="pecaTitulo">Pernas</label>
                         <div class="controle">
-                            <buttom class="controleAjuste" data-controle="-">-</buttom>
+                            <buttom class="controleAjuste" data-controle="-" data-peca="pernas">-</buttom>
                             <input type="text" class="controleContador" data-contador value="00">
-                            <buttom class="controleAjuste" data-controle="+">+</buttom>
+                            <buttom class="controleAjuste" data-controle="+" data-peca="pernas">+</buttom>
                         </div>
                     </div>
                     <hr class="linha">
                     <div class="peca">
                         <label for="" class="pecaTitulo">Foguetes</label>
                         <div class="controle">
-                            <buttom class="controleAjuste" data-controle="-">-</buttom>
+                            <buttom class="controleAjuste" data-controle="-" data-peca="foguetes">-</buttom>
                             <input type="text" class="controleContador" data-contador value="00">
-                            <buttom class="controleAjuste" data-controle="+">+</buttom>
+                            <buttom class="controleAjuste" data-controle="+" data-peca="foguetes">+</buttom>
                         </div>
                     </div>
                 </div>
@@ -101,4 +103,5 @@
 
     <script src="./js/main.js"></script>
 </body>
+
 </html>
